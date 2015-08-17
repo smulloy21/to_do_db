@@ -2,8 +2,9 @@
 
 <ul>
 <% @list.tasks.each() do |task| %>
-  <li><%= task.description %></li><br>
+  <li><%= task.description %> due: <%= Date.parse(task.due_date).strftime("%B %e, %Y") %></li><br>
 <% end %>
+
 </ul>
 <form action="/task/new" method="post">
   <input hidden value="<%= @list.id() %>" name="id">
