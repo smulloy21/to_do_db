@@ -34,9 +34,9 @@ describe(Task) do
   describe('#all') do
     it('returns the items sorted by the most recent') do
       @test_task.save()
-      test_task2 = Task.new({:description => "A Task to Complete", :list_id => 1, :due_date => '2015-10-30 01:00:00'})
+      test_task2 = Task.new({:description => "A Task to Complete", :list_id => 1, :due_date => '2015-10-30 03:00:00'})
       test_task2.save()
-      test_task3 = Task.new({:description => "A Task to Complete", :list_id => 1, :due_date => '2015-10-30 02:00:00'})
+      test_task3 = Task.new({:description => "A Task to Complete", :list_id => 1, :due_date => '2015-11-30 01:00:00'})
       test_task3.save()
       expect(Task.all()).to(eq([@test_task, test_task2, test_task3]))
     end
