@@ -24,11 +24,7 @@ class Task
 
 
   define_method(:==) do |another_task|
-    if self.description == another_task.description &&
-       self.list_id     == another_task.list_id
-      true
-    else
-      false
-    end
+    self.description == another_task.description &&
+    self.list_id     == another_task.list_id
   end
 end

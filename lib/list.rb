@@ -6,6 +6,7 @@ class List
     @name = attributes.fetch(:name)
     @id   = attributes.fetch(:id)
   end
+
   define_singleton_method(:all) do
     returned_lists = DB.exec("SELECT * FROM lists;")
     lists = []
@@ -16,6 +17,7 @@ class List
     end
     lists
   end
+  
   define_method(:save) do
     result = DB.exec("INSERT INTO lists (name) VALUES ('#{@name}') RETURNING id;")
     @id = result.first().fetch('id').to_i()
@@ -26,7 +28,7 @@ class List
        self.name == another_list.name
        true
     else
-       false 
+       false
     end
   end
 end
