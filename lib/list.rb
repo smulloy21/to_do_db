@@ -17,7 +17,7 @@ class List
     end
     lists
   end
-  
+
   define_method(:save) do
     result = DB.exec("INSERT INTO lists (name) VALUES ('#{@name}') RETURNING id;")
     @id = result.first().fetch('id').to_i()
