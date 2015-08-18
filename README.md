@@ -1,4 +1,4 @@
-#	to-do
+#	To Do App (w/ DB)
 ##	Contributors: **Tim Kellogg** and **Shannon Mulloy**
 
 ##	Setup
@@ -9,7 +9,7 @@
 * `rspec` to test
 
 ###	Technologies Used
-* Testing : Rspec, capybara,
+* Testing : Rspec, Capybara,
 
 
 ###	Legal
